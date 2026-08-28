@@ -1,0 +1,93 @@
+[
+  {
+    "site_user_id": 12,
+    "username": "Y Combinator Blog",
+    "url_key": "ycombinator.com",
+    "description": "Y Combinator created a new model for funding early stage startups. Four times a year we invest in a large number of startups.",
+    "description_zh": "Y Combinator，硅谷顶级创业加速器，每年分四批投资大量早期创业公司，开创了种子轮批量投资模式。"
+  },
+  {
+    "site_user_id": 1412,
+    "username": "Claude",
+    "url_key": "claude.com",
+    "description": "Claude — Anthropic's AI assistant. Available on web at claude.ai.",
+    "description_zh": "Claude，Anthropic 推出的 AI 助手，可在 claude.ai 使用。"
+  },
+  {
+    "site_user_id": 1419,
+    "username": "保罗·格雷厄姆",
+    "url_key": "paulgraham.com",
+    "description": "Paul Graham's essays on startups, programming, venture capital, and technology. Co-founder of Y Combinator.",
+    "description_zh": "Paul Graham 关于创业、编程、风险投资与科技的随笔。Y Combinator 联合创始人。"
+  },
+  {
+    "site_user_id": 1420,
+    "username": "保罗·格雷厄姆 (Twitter)",
+    "url_key": "twitter.com/paulg",
+    "description": "Paul Graham, co-founder of Y Combinator and essayist.",
+    "description_zh": "Paul Graham 的推特，Y Combinator 联合创始人，著名创业随笔作家。"
+  },
+  {
+    "site_user_id": 1439,
+    "username": "潜空间",
+    "url_key": "latent.space",
+    "description": "The AI Engineer newsletter and top technical AI podcast. How leading labs build Agents, Models, Infra, and AI for Science.",
+    "description_zh": "AI Engineer 通讯与顶级 AI 技术播客，报道前沿实验室如何构建 Agents、模型、基础设施与 AI4Science。"
+  },
+  {
+    "site_user_id": 1475,
+    "username": "瑞·达利欧 (Twitter)",
+    "url_key": "twitter.com/raydalio",
+    "description": "Official account of Ray Dalio, founder of Bridgewater Associates, author of #1 New York Times bestseller Principles.",
+    "description_zh": "Ray Dalio（雷·达里奥）的推特账号，桥水基金创始人，《原则》作者。"
+  },
+  {
+    "site_user_id": 1497,
+    "username": "橡树资本",
+    "url_key": "oaktreecapital.com",
+    "description": "Oaktree Capital — a leading global investment management firm. Home of Howard Marks' investment memos.",
+    "description_zh": "Oaktree Capital（橡树资本），全球领先的投资管理公司，霍华德·马克斯（Howard Marks）投资备忘录的发源地。"
+  },
+  {
+    "site_user_id": 1503,
+    "username": "纳西姆·尼古拉斯·塔勒布",
+    "url_key": "nntaleb.substack.com",
+    "description": "Probability, applications and inferential rigor. By Nassim Nicholas Taleb.",
+    "description_zh": "Nassim Nicholas Taleb 的 Substack，《黑天鹅》《反脆弱》作者，关于概率、风险与统计推理。"
+  },
+  {
+    "site_user_id": 1516,
+    "username": "Anyway.FM",
+    "url_key": "anyway.fm",
+    "description": "Anyway.FM，两个 UI 设计师做的中文播客，关于设计、技术与创造力的对谈。",
+    "description_zh": "Anyway.FM，由 JJ Ying 和 Leon Gao 主播的中文设计播客，讨论界面设计、交互与设计师的日常。"
+  },
+  {
+    "site_user_id": 1517,
+    "username": "一天世界",
+    "url_key": "blog.yitianshijie.net",
+    "description": "一天世界，昆亂不擋。Lawrence Li 主理。IPN 出品。",
+    "description_zh": "一天世界，Lawrence Li（李如一）主理的科技与文化评论博客，IPN 播客网络出品。"
+  },
+  {
+    "site_user_id": 1989,
+    "username": "LessWrong",
+    "url_key": "lesswrong.com",
+    "description": "LessWrong is a community blog devoted to the art of human rationality, discussing cognitive biases, decision theory, AI safety, and effective altruism.",
+    "description_zh": "LessWrong 是一个专注于人类理性思考的社区博客，讨论认知偏差、决策理论、AI 安全与有效利他主义。"
+  },
+  {
+    "site_user_id": 11153,
+    "username": "INLEVEL9（中文版）",
+    "url_key": "oztalking.com",
+    "description": "INLEVEL9 — a Korea-based analytical newsletter crossing technology, economy, and humanities. Simplified Chinese edition.",
+    "description_zh": "《INLEVEL9》是一份源自韩国的分析类新闻信，交叉解读科技、经济与人文，以深度分析见长。本站为简体中文版，从韩国视角出发，串联科技、经济与社会的发展脉络，适合关注前沿趋势与跨领域议题的读者。"
+  },
+  {
+    "site_user_id": 13049,
+    "username": "tferriss (Twitter)",
+    "url_key": "twitter.com/tferriss",
+    "description": "Author of 5 #1 NYT/WSJ bestsellers, early-stage investor (https://t.co/yOcEk9eccA), Tim Ferriss Show podcast (1B+ downloads), founder of https://t.co/9bQjti1v6c",
+    "description_zh": "5 本纽约时报畅销书作者，早期投资人，Tim Ferriss。"
+  }
+]
