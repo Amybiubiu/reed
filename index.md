@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <p align="center">
   <a href="https://apps.apple.com/cn/app/%E8%8A%A6%E8%8B%87-%E5%8F%91%E7%8E%B0%E5%A5%BD%E5%86%85%E5%AE%B9/id6756805406">
     <img

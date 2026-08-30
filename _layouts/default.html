@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+  <main class="container markdown-body">
+    <div class="markdown-content">
+      {{ content }}
+    </div>
+    <nav id="toc" class="toc" hidden aria-label="目录">
+      <button type="button" class="toc-toggle">目录</button>
+    </nav>
+  </main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
+</body>
+</html>

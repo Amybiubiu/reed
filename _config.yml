@@ -1,0 +1,35 @@
+# 芦苇 Reed 官方博客站点配置
+title: 芦苇 Reed
+description: 芦苇官方博客 —— 值得长期阅读的内容推荐、RSS 订阅源精选与产品更新
+url: https://guide.reeddaily.com
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+author: 芦苇团队
+logo: /images/reed-logo.png
+
+# 文章 URL 使用 ASCII slug(文件名),避免中文 URL
+permalink: /posts/:slug/
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 不参与站点构建的文件(以 _ . # ~ 开头的文件/目录会自动排除)
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - collections
+  - data
+  - scripts
+  - docs
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

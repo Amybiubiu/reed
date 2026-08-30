@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""根据 collections/*.md 的 frontmatter 生成 readme.md 中的「文章合集」表格。
+"""根据 _posts/*.md 的 frontmatter 生成 readme.md 与 index.md 中的「文章合集」表格。
 
 用法: python3 scripts/gen_collections.py
 
-每个 collection 文件需要在头部声明 frontmatter:
+每篇文章文件需放在 _posts/ 下,按 Jekyll 命名规范:
+YYYY-MM-DD-slug.md(slug 用 ASCII,生成站点链接),并在头部声明 frontmatter:
 
     ---
     title: 文章标题
@@ -12,9 +13,11 @@
     date: 2026-08-28
     ---
 
-脚本以表格自身的表头行与分隔行定位「文章合集」表格,只替换表格内容,
-其余部分不动。这样 readme.md 中不需要残留任何注释标记。
+index.md(站点首页)与 README.md(GitHub 展示)内容保持一致,
+脚本同时更新两处表格,只替换表格内容,其余部分不动。
 新增文章后运行一次即可。
+
+注意:文章正文会被 Jekyll 按 Liquid 解析,如含 {{ 或 {% 需用 {% raw %} 包裹。
 """
 
 import re
@@ -22,8 +25,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-COLLECTIONS_DIR = ROOT / "collections"
+POSTS_DIR = ROOT / "_posts"
 README = ROOT / "README.md"
+INDEX = ROOT / "index.md"
+SITE_URL = "https://guide.reeddaily.com"
 
 TABLE_HEADER = "| 文章 | 一句话简介 | 发布时间 |"
 TABLE_SEPARATOR = "|------|-----------|---------|"
@@ -58,18 +63,22 @@ def escape_cell(text):
 
 def collect_articles():
     articles = []
-    for path in sorted(COLLECTIONS_DIR.glob("*.md")):
+    for path in sorted(POSTS_DIR.glob("*.md")):
         meta, _ = parse_frontmatter(path.read_text(encoding="utf-8"))
         title = meta.get("title")
         if not title:
             print(f"[跳过] {path.name}: 缺少 frontmatter title", file=sys.stderr)
             continue
+        # slug 取自文件名 YYYY-MM-DD-slug.md,与站点 permalink /posts/:slug/ 一致
+        m = re.match(r"^\d{4}-\d{2}-\d{2}-(.+)\.md$", path.name)
+        slug = m.group(1) if m else path.stem
         articles.append(
             {
-                "name": path.name,
+                "slug": slug,
                 "title": title,
                 "description": meta.get("description", ""),
-                "date": meta.get("date", ""),
+                # 优先 frontmatter date,缺失时回退到文件名中的日期
+                "date": meta.get("date") or (m.group(0)[:10] if m else ""),
             }
         )
     # 按 date 倒序,无日期的排在最后
@@ -80,7 +89,7 @@ def collect_articles():
 def render_table(articles):
     lines = [TABLE_HEADER, TABLE_SEPARATOR]
     for a in articles:
-        link = f"[{escape_cell(a['title'])}](collections/{a['name']})"
+        link = f"[{escape_cell(a['title'])}]({SITE_URL}/posts/{a['slug']}/)"
         desc = escape_cell(a["description"]) or "—"
         date = escape_cell(a["date"]) or "—"
         lines.append(f"| {link} | {desc} | {date} |")
@@ -96,26 +105,31 @@ TABLE_PATTERN = re.compile(
 ANCHOR = "*以下为芦苇团队整理发布的精选文章。*"
 
 
+def update_file(path, block):
+    """替换或插入指定文件中的「文章合集」表格,返回是否成功。"""
+    text = path.read_text(encoding="utf-8")
+    if TABLE_PATTERN.search(text):
+        path.write_text(TABLE_PATTERN.sub(block, text), encoding="utf-8")
+        return True
+    if ANCHOR in text:
+        path.write_text(text.replace(ANCHOR, f"{ANCHOR}\n\n{block}", 1), encoding="utf-8")
+        return True
+    return False
+
+
 def main():
     articles = collect_articles()
     block = render_table(articles)
 
-    text = README.read_text(encoding="utf-8")
-    if TABLE_PATTERN.search(text):
-        README.write_text(TABLE_PATTERN.sub(block, text), encoding="utf-8")
-        print(f"已更新 {README.name}:{len(articles)} 篇文章")
-        return
-
-    if ANCHOR in text:
-        README.write_text(text.replace(ANCHOR, f"{ANCHOR}\n\n{block}", 1), encoding="utf-8")
-        print(f"已插入 {README.name}:{len(articles)} 篇文章")
-        return
-
-    print(
-        f"{README.name}: 未找到文章合集表格,请检查 readme.md 是否包含 {ANCHOR}",
-        file=sys.stderr,
-    )
-    sys.exit(1)
+    for path in (README, INDEX):
+        if update_file(path, block):
+            print(f"已更新 {path.name}:{len(articles)} 篇文章")
+        else:
+            print(
+                f"{path.name}: 未找到文章合集表格,请检查是否包含 {ANCHOR}",
+                file=sys.stderr,
+            )
+            sys.exit(1)
 
 
 if __name__ == "__main__":

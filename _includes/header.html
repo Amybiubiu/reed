@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="container site-nav">
+    <a class="site-brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/images/reed-logo.png' | relative_url }}" alt="" width="28" height="28">
+      <span>芦苇 Reed</span>
+    </a>
+    <nav aria-label="网站导航">
+      <ul class="nav-links">
+        <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} class="active"{% endif %}>首页</a></li>
+        <li><a href="{{ '/articles/' | relative_url }}"{% if page.url contains '/articles' %} class="active"{% endif %}>文章</a></li>
+        <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about' %} class="active"{% endif %}>关于</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
