@@ -12,8 +12,9 @@
     date: 2026-08-28
     ---
 
-脚本只替换 readme.md 中 <!-- collections:start --> 与 <!-- collections:end -->
-标记之间的内容,其余部分不动。新增文章后运行一次即可。
+脚本以表格自身的表头行与分隔行定位「文章合集」表格,只替换表格内容,
+其余部分不动。这样 readme.md 中不需要残留任何注释标记。
+新增文章后运行一次即可。
 """
 
 import re
@@ -24,8 +25,8 @@ ROOT = Path(__file__).resolve().parent.parent
 COLLECTIONS_DIR = ROOT / "collections"
 README = ROOT / "README.md"
 
-START_MARKER = "<!-- collections:start -->"
-END_MARKER = "<!-- collections:end -->"
+TABLE_HEADER = "| 文章 | 一句话简介 | 发布时间 |"
+TABLE_SEPARATOR = "|------|-----------|---------|"
 
 
 def parse_frontmatter(text):
@@ -77,10 +78,7 @@ def collect_articles():
 
 
 def render_table(articles):
-    lines = [
-        "| 文章 | 一句话简介 | 发布时间 |",
-        "|------|-----------|---------|",
-    ]
+    lines = [TABLE_HEADER, TABLE_SEPARATOR]
     for a in articles:
         link = f"[{escape_cell(a['title'])}](collections/{a['name']})"
         desc = escape_cell(a["description"]) or "—"
@@ -89,22 +87,35 @@ def render_table(articles):
     return "\n".join(lines)
 
 
+# 匹配整张表格:表头行 + 分隔行 + 若干以 | 开头的行
+TABLE_PATTERN = re.compile(
+    re.escape(TABLE_HEADER) + r"\n" + re.escape(TABLE_SEPARATOR) + r"(?:\n\|[^\n]*)*"
+)
+
+# 找不到表格时,插入到这段引言之后
+ANCHOR = "*以下为芦苇团队整理发布的精选文章。*"
+
+
 def main():
     articles = collect_articles()
-    block = "\n".join([START_MARKER, render_table(articles), END_MARKER])
+    block = render_table(articles)
 
     text = README.read_text(encoding="utf-8")
-    pattern = re.compile(re.escape(START_MARKER) + r".*?" + re.escape(END_MARKER), re.DOTALL)
-    if not pattern.search(text):
-        print(
-            f"{README.name}: 未找到标记 {START_MARKER} / {END_MARKER},"
-            "请在 readme.md 中先添加标记块",
-            file=sys.stderr,
-        )
-        sys.exit(1)
+    if TABLE_PATTERN.search(text):
+        README.write_text(TABLE_PATTERN.sub(block, text), encoding="utf-8")
+        print(f"已更新 {README.name}:{len(articles)} 篇文章")
+        return
 
-    README.write_text(pattern.sub(block, text), encoding="utf-8")
-    print(f"已更新 {README.name}:{len(articles)} 篇文章")
+    if ANCHOR in text:
+        README.write_text(text.replace(ANCHOR, f"{ANCHOR}\n\n{block}", 1), encoding="utf-8")
+        print(f"已插入 {README.name}:{len(articles)} 篇文章")
+        return
+
+    print(
+        f"{README.name}: 未找到文章合集表格,请检查 readme.md 是否包含 {ANCHOR}",
+        file=sys.stderr,
+    )
+    sys.exit(1)
 
 
 if __name__ == "__main__":
