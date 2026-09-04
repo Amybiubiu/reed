@@ -43,6 +43,14 @@ a { color: var(--accent); text-decoration: none; }
 
 img { max-width: 100%; }
 
+/* 截图图组：宽屏 4 张同行，窄屏 2×2 换行——列数只在 2 与 4 之间切换，
+   任何宽度下都不会出现一行只有一张图片的情况。 */
+.shot-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 20px 0; }
+.shot-row img { width: 100%; height: auto; }
+@media (min-width: 768px) {
+  .shot-row { grid-template-columns: repeat(4, 1fr); }
+}
+
 /* ---- 顶部导航 ---- */
 .site-header {
   position: sticky;

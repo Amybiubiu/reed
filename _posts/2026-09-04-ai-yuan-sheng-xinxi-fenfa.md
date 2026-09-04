@@ -85,6 +85,15 @@ tags: [信息焦虑, AI 应用, AI 工具, 信息分发, 新闻总结, RSS, 芦�
 - **AI 总结**：信息流里的每一篇内容都有 AI 摘要，先花十秒判断值不值得读；
 - **AI 翻译与全文总结**：点进文章之后，可以对原文进行翻译和总结，外文内容也能无门槛读完。
 
+整个流程在芦苇里长这样（从左到右：说出兴趣 → 生成可编辑表单 → Agent 聚合成信息流 → AI 总结与翻译）：
+
+<div class="shot-row">
+   <img src="/images/forupage/IMG_8014.PNG" alt="信息流中的文章支持 AI 总结与翻译">
+   <img src="/images/forupage/IMG_8012.PNG" alt="在芦苇「为你」中说出感兴趣的领域，AI 生成专属频道">
+   <img src="/images/forupage/IMG_8016.PNG" alt="芦苇生成可编辑表单：标题、搜索描述词、关键词、屏蔽词、信源来源与信源屏蔽来源">
+  <img src="/images/forupage/IMG_8015.PNG" alt="Agent 聚合相关内容与信源，形成持续更新的信息流">
+</div>
+
 ### 对照博主指出的三个问题
 
 回到第一部分的批评，芦苇恰好站在三个问题的反面：
