@@ -55,6 +55,9 @@ layout: default
 
 | 文章 | 一句话简介 | 发布时间 |
 |------|-----------|---------|
+| [有没有一款 AI 产品能拯救我的信息焦虑？](https://guide.reeddaily.com/posts/ai-yuan-sheng-xinxi-fenfa/) | 三类 AI 信息产品的局限，与芦苇「为你」的 AI 原生分发解法 | 2026-09-04 |
+| [不用自己找信息源，AI 帮你生成专属阅读频道](https://guide.reeddaily.com/posts/ai-shengcheng-zhuanshu-pindao/) | 芦苇「为你」功能详解：说出兴趣，AI 持续帮你更新专属频道 | 2026-09-01 |
+| [RSS 阅读器怎么选？Feedly、Reeder 之外这几款也值得一试](https://guide.reeddaily.com/posts/rss-yuedu-qi-tuijian-duibi/) | 从「管理已知信息源」和「发现未知内容」两个角度对比主流 RSS 阅读器 | 2026-09-01 |
 | [13 个值得关注的 RSS 订阅源推荐](https://guide.reeddaily.com/posts/best-rss-feeds-for-tech-ai-startups-investing-design/) | 精选 AI、科技、创业、投资、设计与深度内容 RSS 订阅源 | 2026-08-28 |
 
 ---

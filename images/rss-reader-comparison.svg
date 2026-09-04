@@ -1,0 +1,97 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect x="0" y="0" width="900" height="480" fill="#FAFAF7"/>
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#2B2B28">RSS 阅读器功能对比示意</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#8A8A82">（示意图，非官方截图，仅用于说明功能定位差异）</text>
+
+  <!-- header row -->
+  <g font-size="15" font-weight="700" fill="#2B2B28">
+    <rect x="40" y="96" width="180" height="46" fill="#EFEFE8" stroke="#DEDED2"/>
+    <text x="130" y="124" text-anchor="middle">功能 / 产品</text>
+
+    <rect x="220" y="96" width="165" height="46" fill="#EFEFE8" stroke="#DEDED2"/>
+    <text x="302" y="124" text-anchor="middle">Feedly</text>
+
+    <rect x="385" y="96" width="165" height="46" fill="#EFEFE8" stroke="#DEDED2"/>
+    <text x="467" y="124" text-anchor="middle">Reeder</text>
+
+    <rect x="550" y="96" width="165" height="46" fill="#EFEFE8" stroke="#DEDED2"/>
+    <text x="632" y="124" text-anchor="middle">NetNewsWire</text>
+
+    <rect x="715" y="96" width="165" height="46" fill="#4A6B5A" stroke="#4A6B5A"/>
+    <text x="797" y="124" text-anchor="middle" fill="#FAFAF7">芦苇</text>
+  </g>
+
+  <!-- rows data -->
+  <g font-size="13.5" fill="#3A3A34">
+    <!-- row labels -->
+    <rect x="40" y="142" width="180" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="55" y="164" font-weight="600">自定义导入</text>
+    <text x="55" y="182" font-size="12" fill="#8A8A82">博客/播客/新闻/RSS</text>
+
+    <rect x="40" y="198" width="180" height="56" fill="#F5F5EE" stroke="#EAEAE0"/>
+    <text x="55" y="220" font-weight="600">主动发现</text>
+    <text x="55" y="238" font-size="12" fill="#8A8A82">推荐未订阅的优质源</text>
+
+    <rect x="40" y="254" width="180" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="55" y="276" font-weight="600">AI 生成专属频道</text>
+    <text x="55" y="294" font-size="12" fill="#8A8A82">说出兴趣即可生成</text>
+
+    <rect x="40" y="310" width="180" height="56" fill="#F5F5EE" stroke="#EAEAE0"/>
+    <text x="55" y="332" font-weight="600">精选/编辑推荐</text>
+    <text x="55" y="350" font-size="12" fill="#8A8A82">每日高价值内容</text>
+
+    <rect x="40" y="366" width="180" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="55" y="388" font-weight="600">内容讨论/分享</text>
+    <text x="55" y="406" font-size="12" fill="#8A8A82">围绕内容展开互动</text>
+
+    <!-- Feedly column -->
+    <rect x="220" y="142" width="165" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="302" y="175" text-anchor="middle">●</text>
+    <rect x="220" y="198" width="165" height="56" fill="#F5F5EE" stroke="#EAEAE0"/>
+    <text x="302" y="231" text-anchor="middle" fill="#B0B0A6">部分（AI 过滤）</text>
+    <rect x="220" y="254" width="165" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="302" y="287" text-anchor="middle" fill="#B0B0A6">–</text>
+    <rect x="220" y="310" width="165" height="56" fill="#F5F5EE" stroke="#EAEAE0"/>
+    <text x="302" y="343" text-anchor="middle" fill="#B0B0A6">–</text>
+    <rect x="220" y="366" width="165" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="302" y="399" text-anchor="middle" fill="#B0B0A6">–</text>
+
+    <!-- Reeder column -->
+    <rect x="385" y="142" width="165" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="467" y="175" text-anchor="middle">●</text>
+    <rect x="385" y="198" width="165" height="56" fill="#F5F5EE" stroke="#EAEAE0"/>
+    <text x="467" y="231" text-anchor="middle" fill="#B0B0A6">–</text>
+    <rect x="385" y="254" width="165" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="467" y="287" text-anchor="middle" fill="#B0B0A6">–</text>
+    <rect x="385" y="310" width="165" height="56" fill="#F5F5EE" stroke="#EAEAE0"/>
+    <text x="467" y="343" text-anchor="middle" fill="#B0B0A6">–</text>
+    <rect x="385" y="366" width="165" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="467" y="399" text-anchor="middle" fill="#B0B0A6">–</text>
+
+    <!-- NetNewsWire column -->
+    <rect x="550" y="142" width="165" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="632" y="175" text-anchor="middle">●</text>
+    <rect x="550" y="198" width="165" height="56" fill="#F5F5EE" stroke="#EAEAE0"/>
+    <text x="632" y="231" text-anchor="middle" fill="#B0B0A6">–</text>
+    <rect x="550" y="254" width="165" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="632" y="287" text-anchor="middle" fill="#B0B0A6">–</text>
+    <rect x="550" y="310" width="165" height="56" fill="#F5F5EE" stroke="#EAEAE0"/>
+    <text x="632" y="343" text-anchor="middle" fill="#B0B0A6">–</text>
+    <rect x="550" y="366" width="165" height="56" fill="#FFFFFF" stroke="#EAEAE0"/>
+    <text x="632" y="399" text-anchor="middle" fill="#B0B0A6">–</text>
+
+    <!-- 芦苇 column highlighted -->
+    <rect x="715" y="142" width="165" height="56" fill="#EDF2EE" stroke="#4A6B5A" stroke-width="1.5"/>
+    <text x="797" y="175" text-anchor="middle" fill="#2E5A42" font-weight="700">●</text>
+    <rect x="715" y="198" width="165" height="56" fill="#EDF2EE" stroke="#4A6B5A" stroke-width="1.5"/>
+    <text x="797" y="231" text-anchor="middle" fill="#2E5A42" font-weight="700">●</text>
+    <rect x="715" y="254" width="165" height="56" fill="#EDF2EE" stroke="#4A6B5A" stroke-width="1.5"/>
+    <text x="797" y="287" text-anchor="middle" fill="#2E5A42" font-weight="700">●</text>
+    <rect x="715" y="310" width="165" height="56" fill="#EDF2EE" stroke="#4A6B5A" stroke-width="1.5"/>
+    <text x="797" y="343" text-anchor="middle" fill="#2E5A42" font-weight="700">●</text>
+    <rect x="715" y="366" width="165" height="56" fill="#EDF2EE" stroke="#4A6B5A" stroke-width="1.5"/>
+    <text x="797" y="399" text-anchor="middle" fill="#2E5A42" font-weight="700">●</text>
+  </g>
+
+  <text x="450" y="440" text-anchor="middle" font-size="12" fill="#9A9A90">● 代表具备该能力；"–" 代表该产品未强调此能力（基于公开产品信息整理，仅供参考）</text>
+</svg>

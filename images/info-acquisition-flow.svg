@@ -1,0 +1,59 @@
+<svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect x="0" y="0" width="900" height="460" fill="#FAFAF7"/>
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#2B2B28">三种信息获取方式对比</text>
+
+  <!-- Row 1: 算法推荐 -->
+  <g>
+    <text x="40" y="100" font-size="15" font-weight="700" fill="#2B2B28">算法推荐信息流</text>
+    <rect x="220" y="75" width="150" height="46" rx="8" fill="#F0EAE6" stroke="#D8CFC6"/>
+    <text x="295" y="103" text-anchor="middle" font-size="13">你刷、你停留</text>
+    <path d="M370 98 H420" stroke="#B0A89E" stroke-width="2" marker-end="url(#arrow1)"/>
+    <rect x="420" y="75" width="180" height="46" rx="8" fill="#F0EAE6" stroke="#D8CFC6"/>
+    <text x="510" y="103" text-anchor="middle" font-size="13">算法猜你会点什么</text>
+    <path d="M600 98 H650" stroke="#B0A89E" stroke-width="2" marker-end="url(#arrow1)"/>
+    <rect x="650" y="75" width="200" height="46" rx="8" fill="#F0EAE6" stroke="#D8CFC6"/>
+    <text x="750" y="103" text-anchor="middle" font-size="13">被动接收，不一定有价值</text>
+  </g>
+
+  <!-- Row 2: 传统 RSS -->
+  <g>
+    <text x="40" y="200" font-size="15" font-weight="700" fill="#2B2B28">传统 RSS 订阅</text>
+    <rect x="220" y="175" width="150" height="46" rx="8" fill="#EAEFEA" stroke="#C9D6C9"/>
+    <text x="295" y="203" text-anchor="middle" font-size="13">自己找信息源</text>
+    <path d="M370 198 H420" stroke="#9AAE9A" stroke-width="2" marker-end="url(#arrow2)"/>
+    <rect x="420" y="175" width="180" height="46" rx="8" fill="#EAEFEA" stroke="#C9D6C9"/>
+    <text x="510" y="203" text-anchor="middle" font-size="13">手动订阅、维护列表</text>
+    <path d="M600 198 H650" stroke="#9AAE9A" stroke-width="2" marker-end="url(#arrow2)"/>
+    <rect x="650" y="175" width="200" height="46" rx="8" fill="#EAEFEA" stroke="#C9D6C9"/>
+    <text x="750" y="197" text-anchor="middle" font-size="13">主动、干净</text>
+    <text x="750" y="214" text-anchor="middle" font-size="12" fill="#6B7D6B">但门槛在"找源"这一步</text>
+  </g>
+
+  <!-- Row 3: 芦苇 -->
+  <g>
+    <text x="40" y="300" font-size="15" font-weight="700" fill="#2E5A42">芦苇「为你」</text>
+    <rect x="220" y="275" width="150" height="46" rx="8" fill="#DCEAE1" stroke="#4A6B5A" stroke-width="1.5"/>
+    <text x="295" y="303" text-anchor="middle" font-size="13" fill="#2E5A42">说出你的兴趣</text>
+    <path d="M370 298 H420" stroke="#4A6B5A" stroke-width="2.2" marker-end="url(#arrow3)"/>
+    <rect x="420" y="275" width="180" height="46" rx="8" fill="#DCEAE1" stroke="#4A6B5A" stroke-width="1.5"/>
+    <text x="510" y="303" text-anchor="middle" font-size="13" fill="#2E5A42">AI 帮你发现并持续更新</text>
+    <path d="M600 298 H650" stroke="#4A6B5A" stroke-width="2.2" marker-end="url(#arrow3)"/>
+    <rect x="650" y="275" width="200" height="46" rx="8" fill="#DCEAE1" stroke="#4A6B5A" stroke-width="1.5"/>
+    <text x="750" y="297" text-anchor="middle" font-size="13" fill="#2E5A42" font-weight="700">主动权在你，省去找源过程</text>
+  </g>
+
+  <text x="450" y="400" text-anchor="middle" font-size="13" fill="#6B6B62">核心区别不在"有没有 AI"，而在于——</text>
+  <text x="450" y="422" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2E5A42">出发点是算法猜你喜欢，还是你自己说出的兴趣</text>
+
+  <defs>
+    <marker id="arrow1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#B0A89E"/>
+    </marker>
+    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#9AAE9A"/>
+    </marker>
+    <marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#4A6B5A"/>
+    </marker>
+  </defs>
+</svg>
